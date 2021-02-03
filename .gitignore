@@ -1,0 +1,7 @@
+# db_data
+postgres_data/
+
+#log
+log/
+
+.idea/
