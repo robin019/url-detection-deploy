@@ -21,7 +21,21 @@ services:
     restart: always
     tty: true
     env_file:
-      - url_crawler.env
+      - env/postgres.env
+      - env/url_crawler.env
     volumes:
-      - ./log/crawler:/var/www/html/url_crawler/log/
+      - ./log/crawler:/url_crawler/log/
     container_name: url-crawler
+
+  url-detection:
+    image: liu8613789/url-detection
+    restart: always
+    tty: true
+    env_file:
+      - env/postgres.env
+      - env/url_detection.env
+    volumes:
+      - ./log/api:/url_detection/log/
+    ports:
+      - "8080:8080"
+    container_name: url-detection
