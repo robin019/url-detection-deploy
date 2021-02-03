@@ -1,12 +1,10 @@
 # URL Detection Deployment
-> This is a guide for deploying URL detection serice on a Linux VM.
+> This project builds the URL detection service on Linux VM
 ## Table of contents
-***
 * [Project Structure](#project-structure)
 * [Usage](#usage)
 
 ## Project Structure
-***
 ### docker-compose.yml
 Currently contains three services:
 * url-crawler
@@ -21,7 +19,6 @@ some environment variables that will be passed into containers
 
 ### /log
 several .log file
-***
 ## Usage
 Create and run docker containers.
 The server will be running on port 8080 by default, and you may
